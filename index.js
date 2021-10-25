@@ -80,6 +80,6 @@ app.post("/user/login", async function(req,res){
     }
 })
 
-app.listen( process.env.port || 3000,function(){
+app.listen( process.env || 3000,function(){
     console.log(`Server is running in PORT ${process.env.port}`);
 })
