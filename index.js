@@ -5,8 +5,6 @@ const mongodb = require("mongodb");
 const mongoclient = mongodb.MongoClient;
 const bcryptjs = require("bcryptjs");
 
-const port = process.env.port || 3000;
-
 const URL = "mongodb+srv://shaunakDas:admin123@cluster0.exlrt.mongodb.net/test"; 
 
 app.use(express.json());
@@ -82,6 +80,6 @@ app.post("/user/login", async function(req,res){
     }
 })
 
-app.listen(port,function(){
+app.listen( process.env.port || 3000,function(){
     console.log(`Server is running in PORT ${port}`);
 })
